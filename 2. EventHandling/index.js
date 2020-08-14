@@ -55,6 +55,16 @@ require(["dojo/dom", "dojo/on", "dojo/mouse", "dojo/dom-style", "dojo/domReady!"
         });
 
 
+        //Event Delegation
+        var myDiv = dom.byId('myDiv1');
+        // on(myDiv, on.selector(".clickMe", "click"), function(el){
+        //     alert(el.target.id)
+        // })
+
+        on(myDiv, ".clickMe:click", function(el){
+            alert(el.target.id)
+        })
+
 
     }
 )
